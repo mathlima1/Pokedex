@@ -1,5 +1,7 @@
 import style from './style.module.scss'
 import banner from '../../Image/banner.png'
+import { Link } from 'react-router-dom'
+
 export default function Home() {
     return (
         <div className={style.container}>
@@ -9,7 +11,7 @@ export default function Home() {
                     <p>
                         Você pode conhecer o tipo do Pokemom, seus atributos, desvantagens e habilidades
                     </p>
-                    <button>Ver pokemons</button>
+                    <button><Link to="/pokemons">Ver pokemons</Link></button>
                 </div>
 
                 <div className={style.hero}>

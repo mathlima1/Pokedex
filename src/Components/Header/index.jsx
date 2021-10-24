@@ -1,5 +1,7 @@
 import style from './style.module.scss';
 import logo from '../../Image/Logo.svg';
+import { Link } from 'react-router-dom'
+
 
 export default function Header() {
     return (
@@ -11,10 +13,10 @@ export default function Header() {
                 <div>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pokedex</a></li>
-                            <li> <a href="#">Legendaries</a></li>
-                            <li><a href="#">Documentation</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/pokemons">Pokemons</Link></li>
+                            <li><Link to="/pokemons">Legendaries</Link></li>
+                            <li><Link to="/pokemons">Documentation</Link></li>
                         </ul>
                     </nav>
                 </div>
