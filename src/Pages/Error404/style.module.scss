@@ -1,0 +1,32 @@
+.container{
+    min-height: 100vh;
+    background-image: url('../../Image/404.png');
+    background-size: 70%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: var(--Danger);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-height: 75vh;
+}
+    h2{
+        font: bold 3em 'Karla, sans-serif';
+        color: var(--Dark);
+        span{
+            color: var(--White);
+        }
+    }
+    button{
+        font: bold 1.5em 'Karla', sans-serif;
+        color: var(--Dark);
+        border-radius: 11px;
+        background-color: #F2CB07;
+        box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+        border: none;
+        margin-top: 1em;
+        padding: 17px 78px;
+    }
+}
