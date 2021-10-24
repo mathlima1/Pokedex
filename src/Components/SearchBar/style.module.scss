@@ -1,0 +1,29 @@
+.container {
+  width:100%;
+    input{
+        display: block;
+        width: 100%;
+        font: 400 16px 'Source Sans Pro', sans-serif;
+        background-color: #f2f2f2;
+        box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+        border-radius: 40px;
+        padding: 16px 31px;
+        border: none;
+        height: 55px;
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color:  #212121CC;
+;
+            opacity: 1; /* Firefox */
+          }
+          
+          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:  #212121CC;
+;
+          }
+          
+          &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #212121CC;
+;
+          }
+    }
+}
