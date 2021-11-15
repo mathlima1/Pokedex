@@ -1,5 +1,7 @@
- /*font-family: 'Karla', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;  */
+ /*
+font-family: 'Karla', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;  
+*/
 *{ 
     margin: 0;
     padding: 0;
@@ -8,10 +10,11 @@ font-family: 'Source Sans Pro', sans-serif;  */
 
 :root{
     --Third: #F5DB13;
-    --Primary: #A8A8B3;
-    --Second: #F2B807;
+    --Primary: #F2B807;
+    --Second: #F28F16;
     --Danger: #D93E30;
     --White: #F6F7F9;
+
     --Dark: #212121;
     /* POKE-TYPES */
     --Electric: #F7C545;
@@ -37,8 +40,9 @@ font-family: 'Source Sans Pro', sans-serif;  */
 }
 
 body{
-    background-color: var(--White);
+    background: linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%);
     color: var(--Dark);
+    min-height: 100vh;
 }
 
 body, input, textarea, select, button{
