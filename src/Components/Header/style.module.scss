@@ -2,7 +2,8 @@
     min-width: 100%;
     background-color: var(--Third);
     box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
-    position: fixed;    
+    position: fixed;
+    z-index: 100;
 }
 .container__wrap{
     margin: 0 10%;
@@ -17,18 +18,33 @@
     ul{
         display: flex;
         list-style: none;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         li {
             border-bottom: 2px solid #00000000;
+            padding: 0 30px;
             &:hover{
                 border-bottom: 2px solid var(--Dark);
             }
             a{
+                display: inline-block;
                 font: normal 1.3em 'Karla', sans-serif;
                 color: var(--Dark);
+                width: 100%;
             }
         }
     }
 
+}
+@media screen and (max-width:425px) {
+    .container__wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+            text-align: center;
+        }
+        ul{
+            justify-content: center;
+        }
+    }
 }
