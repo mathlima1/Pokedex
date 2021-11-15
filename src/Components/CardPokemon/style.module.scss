@@ -1,0 +1,75 @@
+.card{
+    display: flex;
+    background-color: var(--White);
+    box-shadow: 0px 5px 10px rgba(0, 0,0 , 0.15);
+    border-radius: 8px;
+    width: 100%;
+    .resume{
+        width:35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 17px 0 17px 17px;
+        h5{
+            font: bold 1.2em 'Karla',sans-serif;
+            text-transform: capitalize;
+        }
+        
+        >div{
+            display: flex;
+            .status{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1em 0.225em;
+                span:first-child{
+                    font: 600 1.1em 'Karla', sans-serif;
+                    color: var(--Dark);
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+
+                    border-radius: 40px;
+                    border:3px solid var(--Dark);
+                    height: 2.5em;
+                    width: 2.5em;
+                }
+                span{
+                    font: normal 0.9em 'Karla', sans-serif;
+                    margin-top:0.3em;
+                    color: #4B4B4B;
+                }
+            }
+        }
+
+        .type{
+            span{
+                color: var(--Dark);
+                text-transform: capitalize;
+                font: normal 0.9em 'Roboto', sans-serif;
+                background-color: var(--Normal);
+                margin: 0 5%;
+                padding: 3% 15%;
+                z-index: 5;
+                box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.18);
+                border-radius: 11px;
+            }
+        }
+    }
+    .image{
+        background-color: var(--Fire);
+        width: 65%;
+        border-radius: 0 8px 8px 0;
+
+        >div{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+
+            img{
+                height: auto;
+                width: 70%;
+            }
+        }
+    }
+}
