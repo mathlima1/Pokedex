@@ -1,12 +1,28 @@
-.container {
+.container header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width:750px;
-    margin: 0 auto;
+    
+    margin: 0 10%;
     padding-top: 5em;
     h4{
         font: normal 2em 'Karla', sans-serif;
         margin: 1em 0;
+    }
+}
+
+.PokeGalery{
+    width: 100%;
+    max-width: 1560px;
+    margin: 3em auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
+}
+@media screen and (max-width: 425px){
+    .PokeGalery{
+        grid-template-columns: auto;
+        width: 90%
     }
 }
