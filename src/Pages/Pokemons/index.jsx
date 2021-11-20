@@ -7,19 +7,23 @@ import CardPokemon from '../../Components/CardPokemon'
 import Paginador from '../../Components/Paginador'
 import { PokemonContext } from '../../Contexts/PokemonContext';
 export default function Pokemons() {
-    const { pokemons } = useContext(PokemonContext)
+    const { pokemons, texto } = useContext(PokemonContext)
 
     const RenderCard = pokemons.map((poke) => {
-        return (
-            <CardPokemon
-                key={poke.name}
-                name={poke.name}
-                image={poke.sprites.other.home.front_default}
-                attack={poke.stats[1].base_stat}
-                defense={poke.stats[2].base_stat}
-                type={poke.types}
-            />
-        )
+        if (!pokemons) {
+            return (<h1>Carregando...</h1>)
+        } else {
+            return (
+                <CardPokemon
+                    key={poke.name}
+                    name={poke.name}
+                    image={poke.sprites.other.home.front_default}
+                    attack={poke.stats[1].base_stat}
+                    defense={poke.stats[2].base_stat}
+                    type={poke.types}
+                />
+            )
+        }
     })
     return (
         <div className={style.container}>

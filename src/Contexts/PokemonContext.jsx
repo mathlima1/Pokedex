@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from 'react';
 export const PokemonContext = createContext({});
 
 export function PokemonProvider({ children }) {
-    const inicio = 15;
+    const inicio = 9;
     const [pokemons, setPokemons] = useState([]);
     const [total, setTotal] = useState(inicio)
     const [texto, setTexto] = useState('');
@@ -16,7 +16,7 @@ export function PokemonProvider({ children }) {
                 const pokemon = await api.get(`/pokemon/${texto}`);
                 allPokemons.push(pokemon.data);
             } else {
-                for (let i = (total - 14); i <= total; i++) {
+                for (let i = (total - 8); i <= total; i++) {
                     const pokemon = await api.get(`/pokemon/${i}`);
                     allPokemons.push(pokemon.data);
                 }

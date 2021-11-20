@@ -32,7 +32,7 @@ export default function CardPokemon(props) {
             </div>
             <div className={getTipos[0]}>
                 <div className={style.imageWrap}>
-                    <img src={props.image} alt={props.name} />
+                    <img src={props.image} alt={props.name} loading="lazy" />
                 </div>
             </div>
         </div>

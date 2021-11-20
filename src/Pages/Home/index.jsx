@@ -15,7 +15,7 @@ export default function Home() {
                 </div>
 
                 <div className={style.hero}>
-                    <img src={banner} width='100%' alt="Pikachu rodeado de pokebolas e nuvens" />
+                    <img src={banner} width='100%' alt="Pikachu rodeado de pokebolas e nuvens" loading="lazy" />
                 </div>
             </div>
         </div>
