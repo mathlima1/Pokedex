@@ -13,7 +13,7 @@
         height: 55px;
         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color:  #212121CC;
-;
+            text-transform: none;
             opacity: 1; /* Firefox */
           }
           
