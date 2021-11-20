@@ -7,7 +7,7 @@ import CardPokemon from '../../Components/CardPokemon'
 import Paginador from '../../Components/Paginador'
 import { PokemonContext } from '../../Contexts/PokemonContext';
 export default function Pokemons() {
-    const { pokemons, texto } = useContext(PokemonContext)
+    const { pokemons } = useContext(PokemonContext)
 
     const RenderCard = pokemons.map((poke) => {
         if (!pokemons) {
