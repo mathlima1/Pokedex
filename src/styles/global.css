@@ -20,6 +20,7 @@ font-family: 'Source Sans Pro', sans-serif;
     --Electric: #F7C545;
     --Ground: #9B897B;
     --Poison: #A974BC;
+    --Water: #76AADB;
     --Normal: #76AADB;
     --Fire:#F76545;
     --Grass: #70A83B;
@@ -27,6 +28,31 @@ font-family: 'Source Sans Pro', sans-serif;
 
 
 }
+.electric{
+    background-color: var(--Electric);
+}
+.ground{
+    background-color: var(--Ground);
+}
+.dark, .rock{
+    background-color: var(--Rock);
+}
+.grass, .bug{
+    background-color: var(--Grass);
+}
+.fire, .fighting, .dragon{
+    background-color: var(--Fire);
+}
+.water,.ice{
+    background-color: var(--Water);
+}
+.normal,.gosth, .steel{
+    background-color: var(--Normal);
+}
+.poison,.psychic, .fairy, .ghost , .flying{
+    background-color: var(--Poison);
+}
+
 
 @media screen and (max-width: 1080px){
      html{

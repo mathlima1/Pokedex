@@ -1,6 +1,13 @@
 import style from './style.module.scss'
 
 export default function CardPokemon(props) {
+    const getTipos = props.type.map((tipo) => {
+        return (
+            tipo.type.name
+        )
+    })
+
+
     return (
         <div className={style.card} >
             <div className={style.resume}>
@@ -16,16 +23,14 @@ export default function CardPokemon(props) {
                     </div>
                 </div>
                 <div className={style.type}>
-                    {
-                        props.type.map((tipo) => {
-                            return (
-                                <span key={tipo.type.name}>{tipo.type.name}</span>
-                            )
-                        })
-                    }
+                    {getTipos.map((tipo) => {
+                        return (
+                            <span key={tipo} className={tipo}>{tipo}</span>
+                        )
+                    })}
                 </div>
             </div>
-            <div className={style.image}>
+            <div className={getTipos[0]}>
                 <div className={style.imageWrap}>
                     <img src={props.image} alt={props.name} />
                 </div>
