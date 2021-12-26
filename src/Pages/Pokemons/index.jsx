@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import style from './style.module.scss'
 
@@ -6,8 +6,10 @@ import SearchBar from '../../Components/SearchBar'
 import CardPokemon from '../../Components/CardPokemon'
 import Paginador from '../../Components/Paginador'
 import { PokemonContext } from '../../Contexts/PokemonContext';
-export default function Pokemons() {
-    const { pokemons } = useContext(PokemonContext)
+export default function Pokemons({ onOpenPokemonActiveModal }) {
+    const { pokemons } = useContext(PokemonContext);
+
+
 
     const RenderCard = pokemons.map((poke) => {
         if (!pokemons) {
@@ -21,6 +23,7 @@ export default function Pokemons() {
                     attack={poke.stats[1].base_stat}
                     defense={poke.stats[2].base_stat}
                     type={poke.types}
+                    onOpenPokemonActiveModal={onOpenPokemonActiveModal}
                 />
             )
         }
@@ -35,6 +38,7 @@ export default function Pokemons() {
                 {RenderCard}
             </div>
             <Paginador />
+
 
         </div>
     )
