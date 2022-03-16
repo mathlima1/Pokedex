@@ -6,7 +6,7 @@ export const PokemonContext = createContext({});
 export function PokemonProvider({ children }) {
     const inicio = 9;
     const [pokemons, setPokemons] = useState([]);
-    const [pokemonActive, setPokemonActive] = useState('bulbasaur');
+    const [pokemonActive, setPokemonActive] = useState('pikachu');
     const [total, setTotal] = useState(inicio)
     const [texto, setTexto] = useState('');
 
