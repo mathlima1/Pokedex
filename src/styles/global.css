@@ -96,6 +96,10 @@ a{
     align-items: center;
     z-index: 100;
 }
+
+.ReactModal__Body--open {
+    overflow-y: hidden;
+  }
 .reactModalClose {
     position: absolute;
     top: 15%;
