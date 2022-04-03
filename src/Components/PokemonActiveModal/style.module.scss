@@ -1,0 +1,190 @@
+.reactModalContent{
+    padding: 0;
+    border-radius: 16px;
+     img{
+         max-width: 300px;
+         height: auto;
+     }
+}
+.type{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    span{
+        font: 600 0.9em 'Roboto', sans-serif;
+        color: var(--White);
+        text-transform: capitalize;
+        margin: 0 1%;
+        padding: 2% 5%;
+        z-index: 1;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.18);
+        border-radius: 11px;
+    }
+}
+.backgroundOverflow{
+    padding: 25px 0;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+    
+    & > div{
+        margin: 0 15px;
+    }
+}
+
+
+.pokemonAtivo__mainInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h3{
+        margin-right: 50px;
+        
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+
+        color: var(--White);
+
+        text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    }
+}
+.pokemonAtivo_geracao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h5{
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+
+        color: var(--White);
+    }
+
+    span{
+        margin-left: 10px;
+
+        background-color: var(--Third);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #000000
+    }
+}
+
+.pokemonAtivo__abilities{
+    margin-top: 25px;
+    background-color: var(--White);
+    width: fit-content;
+    padding: 15px 25px;
+    border-radius: 8px;
+
+    span{
+        text-transform: capitalize;
+    }
+}
+
+.pokemonAtivo__stats{
+    margin-top: 20px;
+    background-color: var(--White);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    & > div{
+        width: 50%;
+        margin: 0 15px 0 0;
+    }
+    div.barra_hp{
+        height: 5px;
+        background: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);
+        border-radius: 8px;
+    }
+    div.barra_xp{
+        height: 5px;
+        background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+        border-radius: 8px;
+    }
+}
+
+.pokemonAtivo__figthStats{
+    display: flex;
+    margin-top: 20px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--White);
+        border-radius: 8px;
+        padding: 8px 24px;
+        
+        & + div {
+            margin-left:24px;
+        }
+        h5{
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+
+            color: #4B4B4B;
+        }
+
+        span{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+
+            border-radius: 40px;
+            border:3px solid var(--Dark);
+            height: 2.5em;
+            width: 2.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 540px){
+    .reactModalContent{
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 100000;
+        padding: 15px;
+        margin: 0;
+         img{
+             max-width: 250px;
+             height: auto;
+         }
+    }
+    .backgroundOverflow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div{
+            *:not(span,h5){
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+    }
+    .pokemonAtivo__figthStats{
+        justify-content: center;
+        div{
+            width: 40% !important;
+            margin: 8px !important;
+            
+        }
+    }
+}

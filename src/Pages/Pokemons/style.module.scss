@@ -20,7 +20,7 @@
     justify-items: center;
     grid-gap: 30px;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 540px){
     .PokeGalery{
         grid-template-columns: auto;
         width: 90%

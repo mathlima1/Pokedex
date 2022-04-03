@@ -96,20 +96,16 @@ a{
     align-items: center;
     z-index: 2;
 }
-.reactModalContent{
-    background-color: var(--White);
-    position: relative;
-    width: 100%;
-    max-width: 576px;
-    padding: 3rem;
-    border:none;
-    border-radius: 5px;
-    outline-color: var(--White);
-}
-.reactModalClose{
+.reactModalClose {
     position: absolute;
-    top: -3rem;
-    right: 0;
+    top: 15%;
+    right: 20%;
     border: none;
-    background:transparent;
+    background: transparent;
+}
+@media screen and (max-width: 540px){
+    .reactModalClose {
+        top: 15%;
+        right: 5%;
+    }
 }
