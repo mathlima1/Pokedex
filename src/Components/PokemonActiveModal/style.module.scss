@@ -160,9 +160,9 @@
         width: 100vw;
         height: 100vh;
         overflow-y: scroll;
-        z-index: 100000;
-        padding: 15px;
+        z-index: 100;
         margin: 0;
+        border-radius: 0;
          img{
              max-width: 250px;
              height: auto;
@@ -172,6 +172,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-radius: 0;
         div{
             *:not(span,h5){
                 flex-wrap: wrap;
