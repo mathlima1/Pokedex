@@ -1,9 +1,19 @@
 import { useContext } from 'react';
+
 import { PokemonContext } from '../../Contexts/PokemonContext';
 import style from './style.module.scss'
+import { tipo } from '../../types/pokemonType'
 
+interface CardPokemonProps {
+    name: string,
+    image: string | null,
+    attack: number,
+    defense: number,
+    type: tipo[],
+    onOpenPokemonActiveModal(): void
+}
 
-export default function CardPokemon(props) {
+export default function CardPokemon(props: CardPokemonProps) {
     const { setPokemonActive } = useContext(PokemonContext)
 
     const getTipos = props.type.map((tipo) => {
@@ -41,7 +51,7 @@ export default function CardPokemon(props) {
             </div>
             <div className={getTipos[0]}>
                 <div className={style.imageWrap}>
-                    <img src={props.image} alt={props.name} loading="lazy" />
+                    <img src={props.image || ''} alt={props.name} loading="lazy" />
                 </div>
             </div>
         </div >

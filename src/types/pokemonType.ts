@@ -62,5 +62,6 @@ interface pokemon {
 }
 
 export type {
+    tipo,
     pokemon
 }
