@@ -1,3 +1,4 @@
+import React from 'react'
 import style from './style.module.scss'
 import RocketTeam from '../../Image/RocketTeam.png'
 import { Link } from 'react-router-dom'

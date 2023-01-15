@@ -6,6 +6,7 @@ import style from './style.module.scss';
 import closeIcon from '../../Image/closeIcon.svg'
 
 Modal.setAppElement('#root')
+
 export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalIsOpen }) {
     const { pokemonActive, pokemons } = useContext(PokemonContext);
     const [pokemonAtivo, setPokemonAtivo] = useState(pokemons[0]);
@@ -44,6 +45,7 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                 >
                     <img src={closeIcon} alt="Fechar modal" />
                 </button>
+
                 <div className={`${getTipos[0]} ${style.backgroundOverflow}`}>
                     <div>
                         <img src={pokemonAtivo?.sprites.other.home.front_default} alt={pokemonAtivo.name} />
@@ -59,7 +61,6 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                         <div className={style.pokemonAtivo__mainInfo}>
                             <h3>{pokemonAtivo.name}</h3>
                             <div className={style.pokemonAtivo_geracao}>
-                                <h5>Generation 1</h5>
                                 <span>{pokemonAtivo.order}</span>
                             </div>
                         </div>

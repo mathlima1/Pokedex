@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Header from './Components/Header'
@@ -34,10 +35,12 @@ function App() {
                 onModalIsOpen={isPokemonActiveModalOpen}
               />
             </Route>
+
             <Route exact path="/">
               <Header />
               <Home />
             </Route>
+
             <Route path="*">
               <Error404 />
             </Route>

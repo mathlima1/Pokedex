@@ -11,6 +11,7 @@ export default function CardPokemon(props) {
             tipo.type.name
         )
     })
+
     function handleOpenModal() {
         setPokemonActive(props.name);
         props.onOpenPokemonActiveModal()

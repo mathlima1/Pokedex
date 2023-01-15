@@ -10,7 +10,6 @@ export function PokemonProvider({ children }) {
     const [total, setTotal] = useState(inicio)
     const [texto, setTexto] = useState('');
 
-
     useEffect(() => {
         async function getPokemons() {
             const allPokemons = [];
@@ -27,6 +26,7 @@ export function PokemonProvider({ children }) {
         }
         getPokemons()
     }, [total, texto])
+
     return (
         <PokemonContext.Provider value={
             {

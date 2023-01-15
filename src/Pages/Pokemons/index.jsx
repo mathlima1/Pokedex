@@ -6,10 +6,9 @@ import SearchBar from '../../Components/SearchBar'
 import CardPokemon from '../../Components/CardPokemon'
 import Paginador from '../../Components/Paginador'
 import { PokemonContext } from '../../Contexts/PokemonContext';
+
 export default function Pokemons({ onOpenPokemonActiveModal }) {
     const { pokemons } = useContext(PokemonContext);
-
-
 
     const RenderCard = pokemons.map((poke) => {
         if (!pokemons) {
@@ -28,6 +27,7 @@ export default function Pokemons({ onOpenPokemonActiveModal }) {
             )
         }
     })
+
     return (
         <div className={style.container}>
             <header>
