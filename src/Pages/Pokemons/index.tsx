@@ -7,7 +7,11 @@ import CardPokemon from '../../Components/CardPokemon'
 import Paginador from '../../Components/Paginador'
 import { PokemonContext } from '../../Contexts/PokemonContext';
 
-export default function Pokemons({ onOpenPokemonActiveModal }) {
+interface PokemonsProp {
+    onOpenPokemonActiveModal(): void
+}
+
+export default function Pokemons({ onOpenPokemonActiveModal }: PokemonsProp) {
     const { pokemons } = useContext(PokemonContext);
 
     const RenderCard = pokemons.map((poke) => {

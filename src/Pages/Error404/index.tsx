@@ -1,7 +1,7 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+
 import style from './style.module.scss'
 import RocketTeam from '../../Image/RocketTeam.png'
-import { Link } from 'react-router-dom'
 
 export default function Error404() {
     return (

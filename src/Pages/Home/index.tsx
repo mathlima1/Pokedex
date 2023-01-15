@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import style from './style.module.scss'
 import banner from '../../Image/banner.png'
-import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
