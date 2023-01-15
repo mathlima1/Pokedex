@@ -1,18 +1,28 @@
-import Modal from 'react-modal';
-import { PokemonContext } from '../../Contexts/PokemonContext';
 import { useState, useEffect, useContext } from 'react';
+import Modal from 'react-modal';
+import { AxiosResponse } from 'axios'
+
 import api from '../../services/api';
 import style from './style.module.scss';
 import closeIcon from '../../Image/closeIcon.svg'
+import { pokemon } from '../../types/pokemonType'
+import { PokemonContext } from '../../Contexts/PokemonContext';
+
 
 Modal.setAppElement('#root')
-export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalIsOpen }) {
+
+interface PokemonActiveModalProps {
+    onClosePokemonActiveModal(): void
+    onModalIsOpen: boolean
+}
+
+export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalIsOpen }: PokemonActiveModalProps) {
     const { pokemonActive, pokemons } = useContext(PokemonContext);
-    const [pokemonAtivo, setPokemonAtivo] = useState(pokemons[0]);
+    const [pokemonAtivo, setPokemonAtivo] = useState<pokemon>(pokemons[0]);
 
     useEffect(() => {
         async function getPokemon() {
-            const pokemon = await api.get(`/pokemon/${pokemonActive}`);
+            const pokemon: AxiosResponse<pokemon> = await api.get(`/pokemon/${pokemonActive}`);
             setPokemonAtivo(pokemon.data);
         }
         getPokemon()
@@ -44,9 +54,10 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                 >
                     <img src={closeIcon} alt="Fechar modal" />
                 </button>
+
                 <div className={`${getTipos[0]} ${style.backgroundOverflow}`}>
                     <div>
-                        <img src={pokemonAtivo?.sprites.other.home.front_default} alt={pokemonAtivo.name} />
+                        <img src={pokemonAtivo?.sprites.other.home.front_default || ''} alt={pokemonAtivo.name} />
                         <div className={style.type}>
                             {getTipos.map((tipo) => {
                                 return (
@@ -55,11 +66,11 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                             })}
                         </div>
                     </div>
+
                     <div>
                         <div className={style.pokemonAtivo__mainInfo}>
                             <h3>{pokemonAtivo.name}</h3>
                             <div className={style.pokemonAtivo_geracao}>
-                                <h5>Generation 1</h5>
                                 <span>{pokemonAtivo.order}</span>
                             </div>
                         </div>
@@ -68,6 +79,7 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                             <h3>Abilities</h3>
                             <span>{pokemonAtivo?.abilities[0]?.ability.name} / {pokemonAtivo?.abilities[1]?.ability.name}</span>
                         </div>
+
                         <div className={style.pokemonAtivo__stats}>
                             <div>
                                 <h3>Healthy Points</h3>
@@ -80,6 +92,7 @@ export default function PokemonActiveModal({ onClosePokemonActiveModal, onModalI
                                 <div className={style.barra_xp} />
                             </div>
                         </div>
+
                         <div className={style.pokemonAtivo__figthStats}>
                             <div>
                                 <span>{pokemonAtivo?.stats[2].base_stat}</span>

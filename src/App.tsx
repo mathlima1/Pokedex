@@ -1,15 +1,15 @@
+import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Header from './Components/Header'
 import Home from './Pages/Home'
 import Pokemons from './Pages/Pokemons'
 import Error404 from './Pages/Error404'
+import Header from './Components/Header'
 import PokemonActiveModal from './Components/PokemonActiveModal'
 
 import { PokemonProvider } from './Contexts/PokemonContext'
 
 import './styles/global.css'
-import { useState } from 'react'
 
 function App() {
   const [isPokemonActiveModalOpen, setIsPokemonActiveModalOpen] = useState(false);
@@ -34,10 +34,12 @@ function App() {
                 onModalIsOpen={isPokemonActiveModalOpen}
               />
             </Route>
+
             <Route exact path="/">
               <Header />
               <Home />
             </Route>
+
             <Route path="*">
               <Error404 />
             </Route>
